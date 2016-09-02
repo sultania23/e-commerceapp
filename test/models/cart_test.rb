@@ -16,5 +16,17 @@ class CartTest < MiniTest::Test
  	assert_equal 3, cart.items.first.quantity
 
   end
+  def test_retrieves_product
+  	product = Product.create! name: "tom", price: 50
+
+  	cart = Cart.new
+  	cart.add_item product.id
+
+  	assert_equal cart.items.length, 1
+  	assert_kind_of Product, cart.items.first.product
+
+
+
+  end
 
 end
