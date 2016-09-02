@@ -25,11 +25,7 @@ development:
   <<: *default
   database: e-commerceapp_development
   adapter: postgresql
-  pool: 5
-  username: sultania23
-  password: pawan1995
-  encoding: unicode
-  host: localhost
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -65,11 +61,7 @@ test:
   <<: *default
   database: e-commerceapp_test
   adapter: postgresql
-  pool: 5
-  username: sultania23
-  password: pawan1995
-  encoding: unicode
-  host: localhost
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

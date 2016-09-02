@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -21,6 +21,7 @@ gem 'haml-rails'
 gem 'mini_magick'
 gem 'devise'
 gem 'country_select'
+gem 'carrierwave', '~> 0.11.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
