@@ -1,0 +1,252 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <script src="js/ajax-angular.js"></script>
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <script src="js/ui-bootstrap.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/carousel.js"></script>
+        <script src="js/sidebar.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="background">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Ecommerce</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown" dropdown>
+                            <a href="#" class="dropdown-toggle" role="button" aria-expanded="false" dropdown-toggle>Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!--<ul class="nav navbar-nav navbar-right">-->
+                          <li class="navbar-right"><a href="#contact">Link</a></li>
+                        <!--</ul>                    -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <!--div ng-include src="'partials/sidebar.html'"></div-->
+                    <div ng-controller="SideMenu">
+                        <div class="mini-submenu" style="background-color: #04488B; border-color: #04488B;">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </div>
+                        <div class="list-group">
+                            <span href="#" class="list-group-item bgcolor">
+                            Submenu
+                            <span class="pull-right" id="slide-submenu">
+                            <i class="fa fa-times"></i>
+                            </span>
+                            </span>
+                            <a href="#category3" class="list-group-item">
+                            <i class="fa fa-comment-o"></i>Category 1
+                            </a>
+                            <a href="#" class="list-group-item">
+                            <i class="fa fa-search"></i> Category 2
+                            </a>
+                            <a href="#" class="list-group-item">
+                            <i class="fa fa-user"></i> Category 3
+                            </a>
+                            <a href="#" class="list-group-item">
+                            <i class="fa fa-folder-open-o"></i> Category 4
+                            </a>
+                            <a href="#" class="list-group-item">
+                            <i class="fa fa-bar-chart-o"></i> Category 5
+                            </a>
+                            <a href="#" class="list-group-item">
+                            <i class="fa fa-envelope"></i> Category 6
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <!--div ng-include src="'partials/home.html'"></div-->
+                    <div ng-controller="CarouselCtrl">
+                        <div style="height: 305px">
+                            <carousel interval="myInterval" no-wrap="noWrapSlides">
+                            <slide ng-repeat="slide in slides" active="slide.active">
+                            <img ng-src="http:{{slide.image}}" style="margin:auto;">
+                            <div class="carousel-caption">
+                                <h4>Something If you want here</h4>
+                                <p>Something more for you</p>
+                            </div>
+                            </slide>
+                            </carousel>
+                        </div>
+                    </div><br />
+
+
+
+                    <!--div ng-include src="'partials/shop.html'"></div-->
+                    <section id="category1">
+                    <div class="row">
+                        <h3 class="well">
+                        Category 1!
+                        </h3>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x150" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right"><i class="fa fa-inr"></i>24.99</h4>
+                                    <h4><a href="#">First Product</a>
+                                    </h4>
+                                    <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x150" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right"><i class="fa fa-inr"></i>64.99</h4>
+                                    <h4><a href="#">Second Product</a>
+                                    </h4>
+                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x150" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right"><i class="fa fa-inr"></i>74.99</h4>
+                                    <h4><a href="#">Third Product</a>
+                                    </h4>
+                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </section>
+                    <div class="row">
+                    <h3 class="well">
+                    Category 2!
+                    </h3>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right"><i class="fa fa-inr"></i>24.99</h4>
+                                <h4><a href="#">First Product</a>
+                                </h4>
+                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right"><i class="fa fa-inr"></i>64.99</h4>
+                                <h4><a href="#">Second Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right"><i class="fa fa-inr"></i>74.99</h4>
+                                <h4><a href="#">Third Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <section id="category3">
+                    <div class="row">
+                    <h3 class="well">
+                    Category 3!
+                    </h3>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/320x150" alt="">
+                        <div class="caption">
+                            <h4 class="pull-right"><i class="fa fa-inr"></i>24.99</h4>
+                            <h4><a href="#">First Product</a>
+                            </h4>
+                            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/320x150" alt="">
+                        <div class="caption">
+                            <h4 class="pull-right"><i class="fa fa-inr"></i>64.99</h4>
+                            <h4><a href="#">Second Product</a>
+                            </h4>
+                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/320x150" alt="">
+                        <div class="caption">
+                            <h4 class="pull-right"><i class="fa fa-inr"></i>74.99</h4>
+                            <h4><a href="#">Third Product</a>
+                            </h4>
+                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    </section>
+                    <!-- /.container -->
+                    <!-- jQuery -->
+                    <script src="js/jquery.js"></script>
+                    <!-- Bootstrap Core JavaScript -->
+                    <script src="js/bootstrap.min.js"></script>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr>
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>CHEAP PRODUCTS HERE.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/agency.js"></script>
+        <script src="js/jquery-easing.min.js"></script>
+    </body>
+</html>
