@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ECommerceapp</title>
+    <title>E-Commerceapp</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,6 +10,8 @@
 
   <body>
     <div class = "container">
+    <%= content_tag :div, notice, class: "bg-success" %>
+    <%= render 'nav' %>
       <%= yield %>
     </div>
   </body>

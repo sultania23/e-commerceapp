@@ -1,0 +1,7 @@
+-@cart.items.each do |item|
+  %p= link_to item.product.name, item.product
+  %p= image_tag item.product.image.thumb
+  %p= item.quantity
+  %p= item.total_price
+
+%p= @cart.total_price
