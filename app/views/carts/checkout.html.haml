@@ -7,3 +7,7 @@
       = item.product.name
       = item.total_price 
 
+%p= @cart.total_price
+
+=form_for @order_form, url: orders_path do |f|
+  %p
