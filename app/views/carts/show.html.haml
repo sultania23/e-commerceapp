@@ -5,3 +5,5 @@
   %p= item.total_price
 
 %p= @cart.total_price
+
+%p= link_to "checkout", checkout_cart_path, class: "btn btn-default"
