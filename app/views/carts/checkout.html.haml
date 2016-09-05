@@ -6,8 +6,20 @@
       = item.quantity
       = item.product.name
       = item.total_price 
-
+total price:
 %p= @cart.total_price
 
 =form_for @order_form, url: orders_path do |f|
-  %p
+  %h3 fill ur personal details
+  =f.fields_for :user, f.object.user do |u|
+    .form-group
+      %p= u.text_field :name, placeholder: "Name",class: "form-control"
+      %p= u.text_field :email, placeholder: "Email",class: "form-control"
+      .form-froup
+        .row
+          %p.col-md-6=u.text_field :address, placeholder: "address"
+          %p.col-md-3=u.text_field :postal_code,placeholder: "postal code"
+          %p.col-md-3=u.text_field :city, placeholder: "city"
+        %p= u.country_select :country, class: "form-control"
+        %p= u.text_field :phone, class: "form-control", placeholder: "phone no." 
+  %p=f.submit "place order", class: "btn btn-default"      
