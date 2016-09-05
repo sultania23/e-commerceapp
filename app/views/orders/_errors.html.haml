@@ -1,2 +1,5 @@
 -if @order_form.has_errors?
-  =@order_form.user.errors.full_messages
+  -@order_form.user.errors.full_messages.each do |error|
+    %p
+      %strong User:
+      =error

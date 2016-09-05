@@ -11,6 +11,8 @@ total price:
 
 =form_for @order_form, url: orders_path do |f|
   = render "orders/errors"
+
+  
   %h3 fill ur personal details
   =f.fields_for :user, f.object.user do |u|
     .form-group

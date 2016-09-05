@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
-         validates_presence_of :name, :address, :city, :country, :postal_code, :email
+         validates_presence_of :name, :address, :city, :country, :postal_code
 end
