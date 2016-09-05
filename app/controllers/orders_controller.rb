@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
 
 	def create
 		@order_form = OrderForm.new(
-			user: order_params[:user]
+			user: User.new(order_params[:user])
 			)
 		if @order_form.save
 			redirect_to root_path, notice: "thank you for placing a order"
@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
 	private
 	def order_params
 		params.require(:order_form).permit(
-			user: [ :name, :email, :phone, :postal_code, :address, :country, :city])
+			user: [ :name, :email, :phone, :postal_code, :address, :country, :city]
+			)
 	end
 end

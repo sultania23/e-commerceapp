@@ -4,6 +4,23 @@ class OrderForm
 	attr_accessor :user, :order
 
 	def save
-		false
+		if valid?
+			persist
+			true
+		else
+			false
+	    end
+	end
+
+	def valid?
+		user.valid?
+
+	end
+	def persist
+		#user.save
+	end
+
+	def has_errors?
+		user.errors.any?
 	end
 end
