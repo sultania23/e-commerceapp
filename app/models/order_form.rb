@@ -17,8 +17,8 @@
 
 	def valid?
 		user.valid?
-
 	end
+	
 	def persist
 		user.save
 		@order = Order.create!(user: user)

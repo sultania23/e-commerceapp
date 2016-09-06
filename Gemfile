@@ -22,6 +22,7 @@ gem 'mini_magick'
 gem 'devise'
 gem 'country_select'
 gem 'carrierwave', '~> 0.11.2'
+gem "braintree"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
