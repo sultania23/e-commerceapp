@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
 
          validates_presence_of :name, :address, :city, :country, :postal_code
+         validates_uniqueness_of :email
 end

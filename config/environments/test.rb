@@ -36,6 +36,10 @@ Rails.application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  Braintree::Configuration.environment = :sandbox
+Braintree::Configuration.merchant_id = "29rm4gsg2k3whkjx"
+Braintree::Configuration.public_key = "m3cyb2yyfnkkxmx7"
+Braintree::Configuration.private_key = "31125fd1c5b23ce0a0bc28f76b45d731"
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
